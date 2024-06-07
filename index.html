@@ -10,7 +10,6 @@
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
   </head>
   <body>
     <div class="container">
@@ -18,14 +17,13 @@
         <input
           type="text"
           class="form-control search-student"
-          placeholder="Searching"
-          aria-label="Searching" />
+          placeholder="Searching" />
         <span class="input-group-text">
           <select class="form-select groups-filter"></select>
         </span>
         <button
           data-bs-toggle="modal"
-          data-bs-target="#studentModal"
+          data-bs-target="#modal"
           class="open-modal-btn btn btn-outline-success"
           type="button">
           Add student
@@ -33,35 +31,56 @@
       </div>
       <div class="students-list">
         <div class="student-header row mb-2">
-          <div class="col-1">#</div>
-          <div class="col-2">Firstname</div>
-          <div class="col-2">Lastname</div>
-          <div class="col-2">Group</div>
-          <div class="col-2">Does work?</div>
-          <div class="col-3 text-end">Action</div>
+          <div
+            class="col-1 text-secondary-emphasis"
+            style="font-weight: bolder">
+            #
+          </div>
+          <div
+            class="col-2 text-secondary-emphasis"
+            style="font-weight: bolder">
+            Firstname
+          </div>
+          <div
+            class="col-2 text-secondary-emphasis"
+            style="font-weight: bolder">
+            Lastname
+          </div>
+          <div
+            class="col-2 text-secondary-emphasis"
+            style="font-weight: bolder">
+            Group
+          </div>
+          <div
+            class="col-2 text-secondary-emphasis"
+            style="font-weight: bolder">
+            Does work?
+          </div>
+          <div
+            class="col-3 text-body-secondary text-end"
+            style="font-weight: bolder">
+            Action
+          </div>
         </div>
-        <div class="students-rows"></div>
+        <div class="students-info"></div>
       </div>
-
-      <!-- Student Modal -->
       <div
         class="modal fade"
-        id="studentModal"
+        id="modal"
         tabindex="-1"
-        aria-labelledby="studentModalLabel"
+        aria-labelledby="modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
           <form class="g-3 student-form" novalidate>
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="studentModalLabel">
+                <h1 class="modal-title fs-5" id="modalLabel">
                   Adding student
                 </h1>
-                <button
-                  type="button"
+                <button type="button"
                   class="btn-close"
                   data-bs-dismiss="modal"
-                  aria-label="Close"></button>
+                  aria-label="Close"><button>
               </div>
               <div class="modal-body">
                 <div class="mb-3">
